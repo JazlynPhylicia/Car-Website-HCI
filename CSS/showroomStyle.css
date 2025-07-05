@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+.navIcons img{
+    width: 30px;
+    height: auto;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+
+body{
+    background: linear-gradient(to bottom, #000, #fff);
+    margin-top: 10rem;
+}
+
+section{
+    padding: 2rem 7%;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 2rem;
+    color: #fff;
+    background: #888;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    letter-spacing: .2rem;
+    background: #333;;
+}
+
+/* Header Style */
+.header{
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 10rem;
+}
+
+.header .logo img{
+    height: 6rem;
+}
+
+.header .navbar a{
+    margin: 0 1.5rem;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.header .navbar a:hover{
+    color: #888;
+    border-bottom: .1rem solid #888;
+    padding-bottom: .5rem;
+}
+
+.header .navIcons a{
+    cursor: pointer;
+    justify-content: center;
+    margin-left: 2rem;
+}
+
+.header .navIcons a{
+    width: 3rem;
+    height: auto;
+}
+
+.navIcons a img:hover{
+    filter: brightness(70%);
+}
+
+#menu-btn {
+    display: none;
+}
+
+/* Cart-item Style */
+.header .cart-item-container {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: calc(100vh - 9.5rem);
+    width: 60rem;
+    background-color: #fff;
+    padding: 0 1.5rem;
+    transition: right 0.5s ease;
+}
+
+.header .cart-item-container.active{
+    right: 0;
+    height: 45rem;
+}
+
+.cart-item{
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #fff;
+    position: relative;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.cart-item img{
+    width: 12rem; 
+    height: auto;
+    margin-right: 1rem;
+}
+
+.cart-item .content{
+    flex-grow: 1;
+    max-width: calc(100% - 14rem); 
+}
+
+.cart-item .content h3{
+    margin: 0;
+    font-size: 1.8rem; 
+    font-weight: bold;
+}
+
+.cart-item .content .price{
+    color: #888;
+    font-size: 1.6rem; 
+}
+
+.cart-item .close-btn {
+    width: 2rem;
+    position: absolute;
+    top: .1rem;
+    right: .1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: 1.5rem;
+}
+
+.cart-item .close-btn:hover{
+    filter: brightness(50%);
+}
+
+.header .cart-item-container .btn{
+    width: 100%;
+    text-align: center;
+}
+
+/* Home Style */
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(showroomPicture.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 100rem;
+}
+
+.home .content h3{
+    font-size: 10rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.home .content p{
+    font-size: 3rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #fff;
+}
+
+.home .content .btn{
+    font-size: 3rem;
+}
+
+/* Carousel Style */
+.carousel-header {
+    text-align: center;
+    font-size: 3rem; 
+    color: #ebebeb;
+    margin-bottom: 5rem;
+}
+
+.carousel-header span {
+    color: #333;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.carousel .slides {
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+}
+
+.carousel img {
+    width: 40rem;
+    height: auto;
+    display: block;
+    margin: 0 5rem;
+}
+
+/* Gallery Style */
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.card{
+    flex: 0 1 47%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    background-color: #fff;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-info{
+    padding: 1rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+.card-info h4{
+    font-size: 2rem;
+}
+
+
+/* Footer Style */
+.footer-container{
+    width: 100%;
+    background-color: #222;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+.footer {
+    width: 100%;
+    padding: 40px 0;
+    background-color: #333;
+}
+
+.footer-content{
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.footer-main h2{
+    color: #fff;
+    font-size: 5rem;
+    margin-bottom: 10px;
+}
+
+.footer-main h2 span{
+    color: #888;
+    font-size: 5rem;
+    margin-bottom: 10px;
+}
+
+.footer-main p{
+    color: #bbb;
+    font-size: 2rem;
+    line-height: 1.5rem;
+}
+
+.socialmedia{
+    margin: 15px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.socialmedia .social-icon{
+    width: 5rem;
+    transition: filter 0.3s;
+}
+
+.socialmedia .social-icon:hover{
+    filter: brightness(70%);
+    cursor: pointer;
+}
+
+.links{
+    margin: 20px;
+    min-width: 200px;
+}
+
+.links p{
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.links a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #bbb;
+    margin-bottom: 10px;
+    display: block;
+    transition: color 0.3s;
+}
+
+.links a:hover{
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+        transition: right 0.3s ease;
+    }
+
+    .header .navbar.active{
+        right: 0;
+    }
+
+    .header .navbar a{
+        color: #24242A;
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+    }
+
+    .home{
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home .content h3{
+        font-size: 4.5rem;
+    }
+
+    .home .content p{
+        font-size: 2rem;
+    }
+
+    .footer-main h2{
+        color: #fff;
+        font-size: 5rem;
+        margin-bottom: 10px;
+    }
+
+    .card{
+        flex: 0 1 90%;
+    }
+
+}
+
+
+@media (max-width: 450px){
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+        transition: right 0.3s ease;
+    }
+
+    .header .navbar.active{
+        right: 0;
+    }
+
+    .header .navbar a{
+        color: #24242A;
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+    }
+
+    .home{
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home .content h3{
+        font-size: 4.5rem;
+    }
+
+    .home .content p{
+        font-size: 2rem;
+    }
+
+    .header .cart-item-container{
+        width: 100%; 
+        height: auto; 
+        right: -100%; 
+        overflow-y: auto; 
+        padding-bottom: 2rem;
+    }
+
+    .header .cart-item-container.active{
+        right: 0;
+    }
+
+    .cart-item{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cart-item img{
+        width: 80%;
+        margin-bottom: 1rem;
+    }
+
+    .cart-item .content{
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .cart-item .close-btn{
+        position: absolute;
+        right: 1rem;
+        margin-top: 0;;
+    }
+
+    .card{
+        flex: 0 0 90%;
+        margin-bottom: 3rem;
+        margin-top: 2rem;
+
+    }
+
+    .footer-content{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-main h2{
+        font-size: 3rem; 
+    }
+
+    .footer-main p{
+        font-size: 1.5rem; 
+    }
+
+    .links{
+        margin: 10px 0; 
+    }
+
+    .links p{
+        font-size: 1.5rem; 
+    }
+
+    .links a{
+        font-size: 1.2rem;
+    }
+
+    .socialmedia{
+        justify-content: center;
+    }
+}

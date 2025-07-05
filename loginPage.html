@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="icon" href="Assets/logo/Logo Diamond Dark.png">
+    <link rel="stylesheet" href="CSS/loginStyle.css">
+    <script src="JS/loginScript.js" defer></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <!-- Left Website Logo -->
+        <a href="homePage.html" class="logo">
+            <img src="Assets/logo/Logo Diamond.png" alt="Logo">
+        </a> 
+
+        <!-- Mid NavBar Icons -->
+        <nav class="navbar">
+            <a href="homePage.html">Home</a>
+            <a href="shopPage.html">Shop</a>
+            <a href="showroomPage.html">Showroom</a>
+            <a href="aboutPage.html">About Us</a>
+        </nav>
+
+        <!-- Right NavBar icons -->
+        <div class="navIcons">
+            <a href="#" id="cart-btn" class="cart-btn">
+                <img src="Assets/icons/shopping cart icon.png" alt="Cart">
+            </a>
+            <a href="loginPage.html" class="login">
+                <img src="Assets/icons/log in icon.png" alt="Login">
+            </a>
+            <a href="#" id="menu-btn" class="menuBar">
+                <img src="Assets/icons/menu bar icon.png" alt="Menu">
+            </a>
+        </div>
+
+        <!-- Shopping cart Items Section -->
+        <div class="cart-item-container">
+            <div class="cart-item">
+                <img src="Assets/icons/close icon.png" class="close-btn" alt="Close">
+                <img src="Assets/cars/2021 Mercedes Benz S Class.png" alt="Mercedes Benz S Class">
+                <div class="content">
+                    <h3>Mercedes Benz S Class</h3>
+                    <div class="price">IDR 1.427.500.000</div>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <img src="Assets/icons/close icon.png" class="close-btn" alt="Close">
+                <img src="Assets/cars/Bentley Genesis G90 2023.png" alt="Bentley Genesis B90">
+                <div class="content">
+                    <h3>Bentley Genesis B90</h3>
+                    <div class="price">IDR 1.430.768.000</div>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <img src="Assets/icons/close icon.png" class="close-btn" alt="Close">
+                <img src="Assets/cars/2023 BMW IX M60.png" alt="2023 BMW IX M60">
+                <div class="content">
+                    <h3>2023 BMW IX M60</h3>
+                    <div class="price">IDR 1.645.230.000</div>
+                </div>
+            </div>
+
+            <!-- Check Out Button -->
+            <a href="#" class="btn">Check Out</a> 
+        </div>
+    </header>
+
+    <!-- Sign In / Sign Up -->
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="" method="GET" id="signup-form">
+                <h1>Create Account</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><img src="Assets/icons/google icon.png" alt="Google"></a>
+                    <a href="#" class="social"><img src="Assets/icons/facebook login icon.png" alt="Facebook"></a>
+                </div>
+                <input type="text" placeholder="Username" id="username">
+                <input type="email" placeholder="Email" id="email">
+                <input type="number" placeholder="Phone Number" id="phoneNumber">
+                <input type="password" placeholder="Password" id= pass1>
+                <input type="password" placeholder="Confirm Password" id="pass2">
+                <div class="checkbox-container">
+                    <input type="checkbox" name="checkbox1" id="checkbox1">
+                    <label for="checkbox1">Agree to Terms and Services</label>
+                </div>
+
+                <button type="button" onclick="validateAllSignUp()">Sign Up</button>
+            </form>
+        </div>
+
+        <div class="form-container sign-in-container">
+            <form action="" method="GET" id="login-form">
+                <h1>Sign In</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><img src="Assets/icons/google icon.png" alt="Google"></a>
+                    <a href="#" class="social"><img src="Assets/icons/facebook login icon.png" alt="Facebook"></a>
+                </div>
+                <input type="email" placeholder="Email" id="email2">
+                <input type="password" placeholder="Password" id="pass3">
+                <a href="#">Forgot your password?</a>
+                <button type="button" onclick="validateAllSignIn()">Sign In</button>
+            </form>
+        </div>
+
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please sign in with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>New To DiamondCut?</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <section class="footer-container">
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <h2>DiamondCut<span>Motors</span></h2>
+                    <p>Your dream car is just one click away! Follow Us!</p>
+                    <div class="socialmedia">
+                        <img class="social-icon" src="Assets/icons/facebook icon.png" alt="Facebook">
+                        <img class="social-icon" src="Assets/icons/instagram icon.png" alt="Instagram">
+                        <img class="social-icon" src="Assets/icons/tiktok icon.png" alt="TikTok">
+                    </div>
+                </div>
+                <div class="links">
+                    <p>Information</p>
+                    <a href="#" class="link">Showroom</a>
+                    <a href="#" class="link">About Us</a>
+                </div>
+                <div class="links">
+                    <p>Helpful Links</p>
+                    <a href="#" class="link">Showroom</a>
+                    <a href="#" class="link">Login</a>
+                </div>
+                <div class="links">
+                    <p>Navigation</p>
+                    <a href="homePage.html" class="link">Home</a>
+                    <a href="shopPage.html" class="link">Shop</a>
+                    <a href="showroomPage.html" class="link">Showroom</a>
+                    <a href="aboutPage.html" class="link">About Us</a>
+                    <a href="loginPage.html" class="link">Login</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+</body>
+</html>

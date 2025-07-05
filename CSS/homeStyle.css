@@ -1,0 +1,736 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+.navIcons img{
+    width: 30px;
+    height: auto;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+
+body{
+    background-color: #fff;
+}
+
+section{
+    padding: 2rem 7%;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 2rem;
+    color: #fff;
+    background: #888;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    letter-spacing: .2rem;
+    background: #333;;
+}
+
+/* Header Style */
+.header{
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 10rem;
+}
+
+.header .logo img{
+    height: 6rem;
+}
+
+.header .navbar a{
+    margin: 0 1.5rem;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.header .navbar a:hover{
+    color: #888;
+    border-bottom: .1rem solid #888;
+    padding-bottom: .5rem;
+}
+
+.header .navIcons a{
+    cursor: pointer;
+    justify-content: center;
+    margin-left: 2rem;
+}
+
+.header .navIcons a{
+    width: 3rem;
+    height: auto;
+}
+
+.navIcons a img:hover{
+    filter: brightness(70%);
+}
+
+#menu-btn {
+    display: none;
+}
+
+/* Cart-item Style */
+.header .cart-item-container {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: calc(100vh - 9.5rem);
+    width: 60rem;
+    background-color: #fff;
+    padding: 0 1.5rem;
+    transition: right 0.5s ease;
+}
+
+.header .cart-item-container.active{
+    right: 0;
+    height: 45rem;
+}
+
+.cart-item{
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #fff;
+    position: relative;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.cart-item img{
+    width: 12rem; 
+    height: auto;
+    margin-right: 1rem;
+}
+
+.cart-item .content{
+    flex-grow: 1;
+    max-width: calc(100% - 14rem); 
+}
+
+.cart-item .content h3{
+    margin: 0;
+    font-size: 1.8rem; 
+    font-weight: bold;
+}
+
+.cart-item .content .price{
+    color: #888;
+    font-size: 1.6rem; 
+}
+
+.cart-item .close-btn {
+    width: 2rem;
+    position: absolute;
+    top: .1rem;
+    right: .1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: 1.5rem;
+}
+
+.cart-item .close-btn:hover{
+    filter: brightness(50%);
+}
+
+.header .cart-item-container .btn{
+    width: 100%;
+    text-align: center;
+}
+
+/* Home Style */
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(homePicture.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 100rem;
+}
+
+.home .content h3{
+    font-size: 10rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.home .content p{
+    font-size: 3rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #fff;
+}
+
+.home .content .btn{
+    font-size: 3rem;
+}
+
+/* Top Tier Vehicles Gallery Style */
+.product .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.product .box-container .box{
+    flex: 1 1 30rem;
+    box-shadow: 0 0.5rem 1.5rem #24242A;
+    border-radius: .5rem;
+    border: .1rem solid #24242A;
+}
+
+.gallery{
+    position: relative;
+    padding: 2rem;
+    transition: right 0.5s ease;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6rem;
+    margin: 6rem auto; 
+    max-width: 1200px; 
+}
+
+.gallery-header{
+    text-align: left;
+    font-size: 3rem; 
+    margin-bottom: 1rem;
+    grid-column: span 2;
+}
+
+.gallery-header span{
+    color: #888;
+}
+
+.gallery-item{
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px #000;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-item:hover{
+    transform: translateY(-1rem);
+}
+
+.gallery-item .image{
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item .image img{
+    width: 100%;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.gallery-item .image:hover img{
+    transform: scale(1.1);
+}
+
+.gallery-item .content{
+    padding: 1rem;
+    text-align: center;
+}
+
+.gallery-item .content h3{
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.gallery-item .content p {
+    margin-bottom: 2.5rem;
+    font-size: 1.7rem;
+    color: #445;
+    text-align: left;
+}
+
+.gallery-item .content .price{
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: left;
+}
+
+.addtocart-btn{
+    color: #fff;
+    background-color: #555;
+    padding: 1rem 1.7rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.addtocart-btn:hover{
+    background-color: #333;
+}
+
+/* Featured Vehicles Style */
+.featured-car-slider{
+    max-width: 1200px;
+    width: 100%;
+    padding: 40px 0;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-car-header{
+    text-align: left;
+    font-size: 3rem; 
+    margin-bottom: 3rem;
+    grid-column: span 2;
+    margin-left: 2rem;
+}
+
+.featured-car-header span{
+    color: #888;
+}
+
+.slide-container{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card-wrapper{
+    display: flex;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    margin: 0 10px;
+    flex: 0 0 30%; 
+}
+
+.card .image-box{
+    width: 100%;
+    padding-top: 70%;
+    position: relative;
+}
+
+.card .image-box img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+}
+
+.card .car-detail{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+}
+
+.car-detail .carName{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.car-detail .carPrice{
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.addtocart-featured-btn{
+    color: #fff;
+    background-color: #555;
+    padding: 1rem 1.7rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.addtocart-featured-btn:hover{
+    background-color: #333;
+}
+
+.slider-button-next, .slider-button-prev{
+    color: #000;
+    height: 40px;
+    width: 40px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.slider-button-next{
+    right: 10px;
+}
+
+.slider-button-prev{
+    left: 10px;
+}
+
+/* Footer Style */
+.footer-container{
+    width: 100%;
+    background-color: #222;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+.footer {
+    width: 100%;
+    padding: 40px 0;
+    background-color: #333;
+}
+
+.footer-content{
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.footer-main h2{
+    color: #fff;
+    font-size: 5rem;
+    margin-bottom: 10px;
+}
+
+.footer-main h2 span{
+    color: #888;
+    font-size: 5rem;
+    margin-bottom: 10px;
+}
+
+.footer-main p{
+    color: #bbb;
+    font-size: 2rem;
+    line-height: 1.5rem;
+}
+
+.socialmedia{
+    margin: 15px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.socialmedia .social-icon{
+    width: 5rem;
+    transition: filter 0.3s;
+}
+
+.socialmedia .social-icon:hover{
+    filter: brightness(70%);
+    cursor: pointer;
+}
+
+.links{
+    margin: 20px;
+    min-width: 200px;
+}
+
+.links p{
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.links a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #bbb;
+    margin-bottom: 10px;
+    display: block;
+    transition: color 0.3s;
+}
+
+.links a:hover{
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+        transition: right 0.3s ease;
+    }
+
+    .header .navbar.active{
+        right: 0;
+    }
+
+    .header .navbar a{
+        color: #24242A;
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+    }
+
+    .home{
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home .content h3{
+        font-size: 4.5rem;
+    }
+
+    .home .content p{
+        font-size: 2rem;
+    }
+
+    .gallery{
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .swiper-navBtn{
+        display: none;
+    }
+
+    .card{
+        flex: 0 0 100%;
+    }
+
+    .featured-car-slider {
+        max-width: 1000px;
+        width: 100%;
+        padding: 40px 0;
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .card .image-box{
+        width: 70%;
+        padding-top: 50%;
+        margin-left: 13rem;
+        position: relative;
+    }
+
+    .footer-main h2{
+        color: #fff;
+        font-size: 5rem;
+        margin-bottom: 10px;
+    }
+
+}
+
+@media (max-width: 450px){
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+        transition: right 0.3s ease;
+    }
+
+    .header .navbar.active{
+        right: 0;
+    }
+
+    .header .navbar a{
+        color: #24242A;
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+    }
+
+    .home{
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home .content h3{
+        font-size: 4.5rem;
+    }
+
+    .home .content p{
+        font-size: 2rem;
+    }
+
+    .gallery{
+        display: block; 
+    }
+
+    .gallery-item{
+        width: 100%; 
+        margin-bottom: 2rem; 
+    }
+
+    .swiper-navBtn{
+        display: none;
+    }
+
+    .card{
+        flex: 0 0 100%;
+    }
+
+    .header .cart-item-container{
+        width: 100%; 
+        height: auto; 
+        right: -100%; 
+        overflow-y: auto; 
+        padding-bottom: 2rem;
+    }
+
+    .header .cart-item-container.active{
+        right: 0;
+    }
+
+    .cart-item{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cart-item img{
+        width: 80%;
+        margin-bottom: 1rem;
+    }
+
+    .cart-item .content{
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .cart-item .close-btn{
+        position: absolute;
+        right: 1rem;
+        margin-top: 0;;
+    }
+
+    .card{
+        flex: 0 0 90%;
+        margin-bottom: 1.5rem;
+    }
+
+    .featured-car-slider{
+        max-width: 100%;
+        width: 100%;
+        padding: 20px 0;
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .card .image-box{
+        width: 100%;
+        padding-top: 55%;
+        margin-left: 0;
+        position: relative;
+    }
+
+    .footer-content{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-main h2{
+        font-size: 3rem; 
+    }
+
+    .footer-main p{
+        font-size: 1.5rem; 
+    }
+
+    .links{
+        margin: 10px 0; 
+    }
+
+    .links p{
+        font-size: 1.5rem; 
+    }
+
+    .links a{
+        font-size: 1.2rem;
+    }
+
+    .socialmedia{
+        justify-content: center;
+    }
+}
+
